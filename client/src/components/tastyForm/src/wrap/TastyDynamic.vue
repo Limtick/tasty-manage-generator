@@ -54,7 +54,6 @@ export default {
   watch: {
     list: {
       handler (old, cur) {
-        console.log(1)
         this.$emit('change', cur)
       }
     }
@@ -64,7 +63,7 @@ export default {
       let empty = {}
       Object.values(this.itemConfig).forEach(item => {
         const { key, defaultValue } = item
-        empty[key] = defaultValue
+        empty[key] = defaultValue()
       })
       return empty
     },

@@ -40,11 +40,16 @@ export default {
       options: list2obj(this._mergeConfig(this.config), 'key')
     }
   },
+  computed: {
+    itemConfig () {
+      return this._mergeConfig(this.config)
+    }
+  },
   methods: {
     initForm () {
       Object.keys(this.options).forEach(key => {
         const item = this.options[key]
-        this.$set(this.form, item.key, item.defaultValue)
+        this.$set(this.form, item.key, item.defaultValue())
       })
     },
     loadForm (data) {

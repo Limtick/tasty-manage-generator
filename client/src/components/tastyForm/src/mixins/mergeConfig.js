@@ -14,7 +14,7 @@ export default {
           ...item.props
         }
         item.component = component
-        item.defaultValue = item.defaultValue || defaultValue
+        item.defaultValue = isFn(item.defaultValue) ? item.defaultValue : defaultValue
         item.option = isFn(item.option) ? item.option : (item.option ? item.option : () => false)
         item._renderable = isFn(item._renderable) ? item._renderable : () => true
 

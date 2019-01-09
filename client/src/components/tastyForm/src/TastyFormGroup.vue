@@ -70,7 +70,7 @@ export default {
   methods: {
     initForm () {
       this.baseConfig.forEach(item => {
-        this.$set(this.form, item.key, item.defaultValue)
+        this.$set(this.form, item.key, item.defaultValue())
       })
       this.$set(this.form, this.groupKey, [])
 
@@ -81,7 +81,7 @@ export default {
         }
         this.itemConfig.forEach(item => {
           const { key, defaultValue } = item
-          param[key] = defaultValue
+          param[key] = defaultValue()
         })
         this.form[this.groupKey].push(param)
       })

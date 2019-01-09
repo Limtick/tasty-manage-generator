@@ -1,21 +1,21 @@
 export default {
   input: {
     component: 'el-input',
-    defaultValue: '',
+    defaultValue: () => '',
     props: {
       clearable: true
     }
   },
   select: {
     component: 'tasty-select',
-    defaultValue: '',
+    defaultValue: () => '',
     props: {
       clearable: false
     }
   },
   checkbox: {
     component: 'tasty-checkbox',
-    defaultValue: [],
+    defaultValue: () => [],
     props: {
       enableIndeterminate: false,
       border: false
@@ -23,20 +23,20 @@ export default {
   },
   radio: {
     component: 'tasty-radio',
-    defaultValue: '',
+    defaultValue: () => '',
     props: {
       border: false
     }
   },
   date: {
     component: 'el-date-picker',
-    defaultValue: '',
+    defaultValue: () => '',
     props: {
       clearable: false
     }
   },
   dynamic: {
     component: 'tasty-dynamic',
-    defaultValue: []
+    defaultValue: () => []
   }
 }

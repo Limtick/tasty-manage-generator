@@ -247,7 +247,7 @@ export default {
                 value: item
               }
             }),
-            defaultValue: ''
+            defaultValue: () => ''
           },
           {
             key: 'required',
@@ -257,7 +257,7 @@ export default {
               0: '不必填',
               1: '必填'
             },
-            defaultValue: '1'
+            defaultValue: () => '1'
           },
           {
             key: 'optionsLoadType',
@@ -275,7 +275,7 @@ export default {
               0: '接口',
               1: '手动配置'
             },
-            defaultValue: '0'
+            defaultValue: () => '0'
           },
           {
             key: 'url',
@@ -314,7 +314,7 @@ export default {
                 }
               ]
             },
-            defaultValue: []
+            defaultValue: () => []
           },
           {
             key: 'defaultSetting',

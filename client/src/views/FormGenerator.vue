@@ -13,6 +13,7 @@
       <el-main class="padding-x-20">
         <el-row class="h-full" :gutter="30">
           <el-col class="h-full scrollable" :span="12">
+            <el-button size="small" @click="reset">reset</el-button>
             <tasty-form-group
               v-model="formSetting"
               ref="formSetting"
@@ -156,7 +157,7 @@ export default {
                 value: item
               }
             }),
-            defaultValue: ''
+            defaultValue: () => ''
           },
           {
             key: 'required',
@@ -166,7 +167,7 @@ export default {
               0: '不必填',
               1: '必填'
             },
-            defaultValue: '1'
+            defaultValue: () => '1'
           },
           {
             key: 'optionsLoadType',
@@ -183,7 +184,7 @@ export default {
               0: '接口',
               1: '手动配置'
             },
-            defaultValue: '0'
+            defaultValue: () => '0'
           },
           {
             key: 'url',
@@ -222,7 +223,7 @@ export default {
                 }
               ]
             },
-            defaultValue: []
+            defaultValue: () => []
           },
           {
             key: 'defaultSetting',
@@ -351,6 +352,9 @@ export default {
       })
       // console.log(JSON.stringify(res, null, 2))
       return res
+    },
+    reset () {
+      this.$refs.formSetting.setDefaultValueByRenderRule()
     }
   },
   mounted () {
