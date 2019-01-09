@@ -1,0 +1,26 @@
+.h-full {
+  height: 100%;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.scrollable {
+  overflow: auto;
+}
+
+$step-list: 10 15 20;
+
+@each $step in $step-list {
+  $padding-x-name: padding-x-#{$step};
+  $padding-y-name: padding-y-#{$step};
+
+  .#{$padding-x-name} {
+    padding: 0 #{$step}px;
+  }
+
+  .#{$padding-y-name} {
+    padding: #{$step}px 0;
+  }
+}

@@ -1,0 +1,9 @@
+{
+    "name": "企业名称",
+    "province": "地域",
+    "productName": "产品名称",
+    "entAdminInfo": "企业管理员",
+    "createDate": "创建时间",
+    "label": "租户使用类型",
+    "check": "测试多选"
+}

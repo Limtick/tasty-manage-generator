@@ -1,0 +1,19 @@
+@import './_var.scss';
+
+.tasty-form {
+  .form-group {
+    h3 {
+      padding-left: 10px;
+      line-height: 24px;
+      margin-bottom: 20px;
+      font-size: 16px;
+      color: $--color-text-primary;
+      border-left: 2px solid $--color-primary;
+    }
+  }
+  .tasty-dynamic {
+    .el-form-item {
+      margin-bottom: 10px;
+    }
+  }
+}
